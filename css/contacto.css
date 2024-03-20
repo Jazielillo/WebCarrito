@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 16px;
+}
+
+.todo-contacto {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20rem 0 5rem;
+}
+
+.foto-contacto {
+    display: flex;
+    width: 55rem;
+    height: 55rem;
+
+}
+
+.formulario-contacto img {
+    width: 4rem;
+    margin-right: 1rem;
+    height: auto;
+}
+
+
+.texto-contactanos h1 {
+    font-size: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+}
+
+
+
+.nombre-email-contacto {
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    opacity: 50%;
+    padding: 1.3rem;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.nombre-email-contacto input {
+    height: 5rem;
+    width: 40rem;
+    border: none;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.nombre-email-contacto textarea {
+    width: 40rem;
+    height: 10rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    border: none;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+}
+
+.formulario .botones input[type="submit"] {
+    background-color: #2B59FC;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 0.7rem 3rem;
+    cursor: pointer;
+    margin-top: 3rem;
+    margin: 10px 10px 10px 10px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    font-size: 3rem;
+}
+
+.formulario .botones input[type="reset"] {
+    background-color: #FC2B51;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 0.7rem 3rem;
+    cursor: pointer;
+    margin: 10px 10px 10px 10px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8);
+    font-size: 3rem;
+}
+
+.formulario .botones {
+    margin: 0 10rem;
+}
