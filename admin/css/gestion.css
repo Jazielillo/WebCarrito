@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box; 
+  font-size: 62.5%; 
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  font-family: var(--fuenteParrafos);
+  font-size: 1.6rem;
+  line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+
+.contenedor{
+  max-width: 120rem;
+  max-height: 80rem;
+  width: 90%;
+  margin: 0 auto; 
+}
+
+a{
+  text-decoration: none;
+}
+h1, h2, h3, h4{ 
+  font-family: var(--fuenteHeading);
+}
+h1{
+  font-size: 4.8rem;
+}
+h2{
+  font-size: 4rem;
+}
+h3{
+  font-size: 3.2rem;
+}
+h4{
+  font-size: 2.8rem;
+}
+img{
+  max-width: 100%;
+}
+
+/* Utilidades */
+.no-margin{ 
+  margin: 0; 
+}
+.no-padding{ 
+  padding: 0;
+}
+.centrar-texto{
+  text-align: center;
+}
+
+
+.contenedor-gestion{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 15rem;
+}
+
+.panel{
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease; 
+}
+
+.panel:hover {
+  transform: translateY(-10px); 
+}
+
+.texto {
+  position: absolute;
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  font-size: 2rem; 
+  color: white; 
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  
+}
+
+
+.imagen{
+  width: 512px;
+  height: auto;
+}
+.mensaje {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12rem;
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 3rem;
+  z-index: 999;
+}
+
+.bien {
+  background-color: #4caf50; 
+}
+
+.mal {
+  background-color: #FF5733;;
+}
+
+.texto-centro {
+  text-align: center;
+  margin-top: 20rem;
+}

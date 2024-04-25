@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
-    <link rel="stylesheet" href="/Tarea6-webCarrito/css/logincss.css">
+    <link rel="stylesheet" href="../css/logincss.css">
 </head>
 
 <body>
+    <div class="mensaje" id="mensajeDiv"></div>
     <div class="contenedor">
         <div class="contBienvenido">
             <div class="infBienvenido">
@@ -26,20 +27,21 @@
                 <div class="casillas">
                     <label>
                         <i class='bx bxs-user'></i>
-                        <input type="text" value="" placeholder="Usuario">
+                        <input type="text" value="" placeholder="Usuario" id="usuario">
                     </label>
 
                     <label for="">
                         <i class='bx bxs-lock' style='color:#020202'></i>
-                        <input type="password" value="" placeholder="Contraseña">
+                        <input type="password" value="" placeholder="Contraseña" id="contrasena">
                     </label>
 
-                    <input type="submit" value="Aceptar">
+                    <input type="submit" value="Aceptar" id="aceptar">
                     <input type="reset" value="Limpiar">
+                    <!-- <input type="submit" value="Listar" id="listar"> -->
                 </div>
             </div>
         </div>
     </div>
 </body>
-
+<script src="../js/login.js" type="module"></script>
 </html>

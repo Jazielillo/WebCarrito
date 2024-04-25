@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
-    <link rel="stylesheet" href="/Tarea6-webCarrito/css/registrarsecss.css">
+    <link rel="stylesheet" href="../css/registrarsecss.css">
 </head>
 
 <body>
+    <div class="mensaje" id="mensajeDiv">Producto agregado correctamente</div>
     <div class="contenedor">
         <div class="contBienvenido">
             <div class="infBienvenido">
@@ -26,40 +27,47 @@
                 <div class="casillas">
                     <label>
                         <i class='bx bxs-user'></i>
-                        <input type="text" value="" placeholder="Nombre">
+                        <input type="text" value="" placeholder="Nombre" id="nombre">
                     </label>
 
                     <label>
                         <i class='bx bxs-baby-carriage'></i>
-                        <input type="text" value="" placeholder="Edad">
+                        <input type="number" value="" placeholder="Edad" id="edad" min="15" max="100">
                     </label>
 
                     <label>
                         <i class='bx bx-envelope'></i>
-                        <input type="text" value="" placeholder="Email">
+                        <input type="text" value="" placeholder="Email" id="email">
                     </label>
 
                     <label>
                         <i class='bx bxs-user'></i>
-                        <input type="text" value="" placeholder="Usuario">
+                        <input type="text" value="" placeholder="Usuario" id="usuario">
                     </label>
 
                     <label for="">
                         <i class='bx bxs-lock' style='color:#020202'></i>
-                        <input type="password" value="" placeholder="Contraseña">
+                        <input type="password" value="" placeholder="Contraseña" id="contraseña">
                     </label>
 
                     <label for="">
                         <i class='bx bxs-lock' style='color:#020202'></i>
-                        <input type="password" value="" placeholder="Confirmar contraseña">
+                        <input type="password" value="" placeholder="Confirmar contraseña" id="contraseña2">
                     </label>
 
-                    <input type="submit" value="Aceptar">
-                    <input type="reset" value="Limpiar">
+                    <input type="submit" value="Aceptar" id="aceptar">
+                    <input type="reset" value="Limpiar" id="limpiar">
+                    <input type="submit" value="Eliminar" id="eliminar">
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="../js/registrarse.js" type="module"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
+<script type="text/javascript">
+  emailjs.init('ctT4IaQ1HSWYeUNKz')
+</script>
 </html>

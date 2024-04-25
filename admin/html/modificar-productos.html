@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Productos</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../../css/iniciocss.css">
+    <link rel="stylesheet" href="../../css/configuracion.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../css/gestion.css">
+    <link rel="stylesheet" href="../css/gestion-productos.css">
+    <script src="https://kit.fontawesome.com/9834f61985.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="mensaje" id="mensajeDiv"></div>
+    <div class="container">
+        <div class="contenedor-arriba">
+            <nav class="navegacion header">
+                <div class="nav-imagen">
+                    <a href="gestion.html">
+                        <div class="foto-perfil">
+                            <img src="../img/logoTienda.png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="icono-perfil">
+                    <a href="perfil-admin.html" class="flex-cel flex-perfil">
+                        <img src="../img/user.png" alt="">
+                        <p id="nombre">Admin</p>
+                    </a>
+                </div>
+                <div class="icono-carrito">
+                    <a href="../html/gestion.html" class="flex-cel flex-perfil">
+                        <img src="../img/caja.png" alt="">
+                        <p>Gestionar productos</p>
+                    </a>
+                </div>
+            </nav>
+        </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
+
+    </div>
+
+
+
+    
+
+
+    <div class="contenedor-principal">
+        <h2 class="titulo-izquierda">Lista de productos</h2>
+        <form class="formularios-alta-productos">
+            <div class="contenedor-busqueda">
+                <div class="contenedor-busqueda-arriba">
+                    <div class="contenedor-buscador contenedor-buscador2">
+                        <div class="nav-buscador contenedor-buscador2" >
+                            <input type="text" id="searchInput" placeholder="Buscar productos...">
+                            <button onclick="buscar()"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="busqueda-productos">
+                    
+                </div>
+
+            </div>
+
+
+            <div class="datos-alta-productos">
+                <div class="campo">
+                    <label for="nombreProducto">Nombre: </label>
+                    <input id="nombreProducto" type="text" placeholder="Ingresa el nombre del producto" name="nombres">
+                </div>
+                <div class="campo">
+                    <label for="descripcion">Descripcion: </label>
+                    <textarea id="descripcion" name="descripcion" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div class="campo">
+                    <label for="precio">Precio: </label>
+                    <input id="precio" type="number" min="1">
+                </div>
+                <div class="campo">
+                    <label for="cantidad">Cantidad: </label>
+                    <input id="cantidad" type="number" min="0">
+                </div>
+
+                <div class="img-alta-productos">
+                    <label for="">Imagen</label>
+                    <div class="preview-container" id="preview-container">
+                        <img src="#" alt="Previsualización de la imagen" class="preview-image" id="preview-img">
+                    </div>
+                    <input type="file" id="input-imagen" accept="image/*">
+                </div>
+
+                <div class="boton-estilo mrg-top btnEnviar">
+                    Modificar producto
+                </div>
+
+            </div>
+
+            
+        </form>
+    </div>
+<script src="../js/modificarProductos.js" type="module"></script>
+<script src="../js/comprobarAdmin.js"></script>
+</body>
+</html>

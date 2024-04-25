@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
-    <link rel="stylesheet" href="../css/iniciocss.css">
-    <link rel="stylesheet" href="../css/configuracion.css">
-    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="/css/iniciocss.css">
+    <link rel="stylesheet" href="/css/configuracion.css">
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/panel-busqueda.css">
     <script src="https://kit.fontawesome.com/9834f61985.js" crossorigin="anonymous"></script>
 </head>
 
@@ -35,20 +36,20 @@
                             </select>
                         </div>
                         <input type="text" id="searchInput" placeholder="Buscar productos...">
-                        <button id="buscarProductos"><i class="fas fa-search"></i></button>
+                        <button id="buscarProductos" onclick="buscar()"><i class="fas fa-search"></i></button>
                     </div>
                 </div>
 
 
                 <div class="icono-celular">
                     <a href="../html/contacto.html" class="flex-cel">
-                        <div class="imagen-celular">
-                            <img src="../img/telefono.png" alt="error">
-                        </div>
-                        <div class="contenido">
-                            <p>Comprar ahora</p>
-                            <p>6682936047</p>
-                        </div>
+                            <div class="imagen-celular">
+                                <img src="../img/telefono.png" alt="error">
+                            </div>
+                            <div class="contenido">
+                                <p>Comprar ahora</p>
+                                <p>6682936047</p>
+                            </div>
                     </a>
                 </div>
                 <div class="icono-perfil">
@@ -67,19 +68,13 @@
         </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
 
 
-        <section class="contenedor-anuncio">
-            <div class="anuncio-deslizante">
-
-            </div>
-        </section>
-
         <section class="productos-tendencia principal-pagina">
             <div class="titulo-tendencias">
-                <h2>Productos disponibles</h2>
+                <h2 class="titulo">Productos relacionados a tu busqueda.</h2>
             </div>
 
             <div class="productos-tendencias-totales">
-
+                
             </div>
         </section>
 
@@ -91,7 +86,6 @@
     </div>
 
 </body>
-<script src="../js/inicio.js" type="module"></script>
+<script src="../js/panelBusqueda.js" type="module"></script>
 <script src="../js/comprobarUsuario.js"></script>
-<!-- <script src="../js/cookies.js"></script> -->
 </html>

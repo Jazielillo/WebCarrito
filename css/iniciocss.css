@@ -1,278 +1,188 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
 }
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 
-.contenedor-arriba {
-    background-color: #CC2747;
-
-}
-
-.navegacion {
-    display: flex;
-    height: 12rem;
-}
-
-.izquierda {
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 50%;
-    margin-left: 3rem;
-}
-
-.izquierda a {
-    color: white;
-}
-
-.foto-perfil img {
-    width: 15rem;
-    height: auto;
-    padding-left: 2rem;
-}
-
-.buscar {
-    width: 60rem;
-    margin-left: 10rem;
-    border: none;
-    height: 4rem;
-    border-radius: .5rem;
-    -webkit-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
-    box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
-}
-
-.derecha {
-    margin: 0 8rem;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    padding-right: 4rem;
-}
-
-.derecha a {
-    color: black;
-}
-
-.derecha p {
-    color: white;
-}
-
-.icono-celular {
-    display: flex;
-}
-
-.icono-celular img {
-    width: 4rem;
-    height: auto;
-}
-
-.icono-celular p {
-    font-size: 1.8rem;
-    font-weight: 700;
-}
-
-.icono-perfil {
-    display: flex;
-}
-
-.icono-perfil img {
-    width: 6rem;
-    height: auto;
-}
-
-.icono-perfil p {
-    font-size: 2.2rem;
-    font-weight: 700;
-}
-
-.icono-carrito {
-    display: flex;
-}
-
-.icono-carrito img {
-    width: 6rem;
-    height: auto;
-}
-
-.icono-carrito p {
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-
-.iconos {
-    font-size: 2rem;
-}
-
-.iconos svg {
-    height: 6rem;
-    width: 6rem;
-}
 
 .contenedor-anuncio {
-    display: flex;
-    margin-top: 4rem;
+  display: flex;
+  margin-top: 4rem;
 }
 
 .anuncio-deslizante {
-    border: 1px solid red;
-    height: 18rem;
-    width: 100%;
-    background-image: url(/Tarea6-webCarrito/img/dulces_banner.jpg);
-    background-repeat: no-repeat;
-    height: 44rem;
+  border: 1px solid red;
+  height: 18rem;
+  width: 100%;
+  background-image: url(/Tarea6-webCarrito/img/dulces_banner.jpg);
+  background-repeat: no-repeat;
+  height: 44rem;
 }
 
 .productos-tendencia {
-    margin-top: 4rem;
-    border: 1px solid red;
-    background-color: #E0153C;
-    margin: 5rem;
-    border-radius: 4rem;
-    -webkit-box-shadow: 10px 10px 18px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 10px 10px 18px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: 10px 10px 18px -4px rgba(0, 0, 0, 0.75);
+  margin-top: 4rem;
+  border: 1px solid red;
+  background-color: #e0153c;
+  margin: 5rem;
+  border-radius: 4rem;
+  -webkit-box-shadow: 10px 10px 18px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 18px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 18px -4px rgba(0, 0, 0, 0.75);
 }
 
 .productos-tendencia h2 {
-    margin: 4rem 8.6rem;
-    padding: 1rem 8rem;
-    border: 1px solid red;
-    background-color: white;
-    border-radius: 2rem;
-    -webkit-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
-    box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-    font-size: 4.2rem;
-
-
+  margin: 4rem 4.6rem;
+  padding: 1rem 8rem;
+  border: 1px solid red;
+  background-color: white;
+  border-radius: 2rem;
+  -webkit-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  font-size: 4.2rem;
 }
 
-
-
 .fila-productos {
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 8rem;
-
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 8rem;
 }
 
 .titulo-tendencias {
-    display: flex;
+  display: flex;
 }
 
 .foto-producto {
-    width: auto;
-    height: auto;
-    display: flex;
-    justify-content: center;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .foto-producto img {
-    height: 25rem;
-    max-width: 25rem;
-    object-fit: cover;
-
+  height: 25rem;
+  max-width: 25rem;
+  object-fit: cover;
 }
 
 .producto {
-    background-color: white;
-    border-radius: 4rem;
-    width: 40rem;
-    margin-bottom: 5rem;
-    -webkit-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
-    box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+  background-color: white;
+  border-radius: 4rem;
+  width: 40rem;
+  margin-bottom: 5rem;
+  -webkit-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
 }
 
 .descripcion-producto {
-    margin-left: 3rem;
+  margin-left: 3rem;
 }
 
 .descripcion-producto {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 .descripcion-producto p {
-    font-size: 2rem;
-    font-weight: 700;
-    text-shadow: 0.2px 0.2px 2px rgba(0, 0, 0, 0.6);
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0.2px 0.2px 2px rgba(0, 0, 0, 0.6);
 }
 
 .descripcion-producto span {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #48832D;
-    text-shadow: 0.3px 0.3px 1.5px rgba(0, 0, 0, 0.6);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #48832d;
+  text-shadow: 0.3px 0.3px 1.5px rgba(0, 0, 0, 0.6);
 }
 
 .descripcion-producto .precio {
-    color: #48832D;
-    font-size: 1.5rem;
+  color: #48832d;
+  font-size: 1.5rem;
 }
 
 .galletasPrincipe img {
-    height: 250px;
+  height: 250px;
 }
 
-
-
 .cajita-agregar {
-    display: flex;
-    justify-content: center;
-    padding: 1.5rem;
-    width: 40rem;
-    background-color: black;
-    color: white;
-    border-radius: 0 0 4rem 4rem;
-    text-shadow: 3px 3px 2px rgba(66, 66, 66, 0.6);
-    -webkit-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
-    box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  width: 40rem;
+  background-color: black;
+  color: white;
+  border-radius: 0 0 4rem 4rem;
+  text-shadow: 3px 3px 2px rgba(66, 66, 66, 0.6);
+  -webkit-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
 }
 
 .agregar p {
-    font-size: 2.2rem;
-    font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
 .contenedor-config {
-    display: flex;
-    justify-content: flex-end;
-    margin: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  margin: 3rem;
 }
 
 .configuracion img {
-    width: 6rem;
-    height: auto;
+  width: 6rem;
+  height: auto;
 }
 
 .configuracion {
-    border: 2px solid black;
-    padding: 1.2rem;
-    border-radius: 50%;
+  border: 2px solid black;
+  padding: 1.2rem;
+  border-radius: 50%;
+}
+
+.producto .cajita-agregar {
+  cursor: pointer;
+}
+
+.mensaje {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7rem;
+  background-color: #4caf50; /* Verde amigable */
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 1.5rem;
+  z-index: 999;
+}
+
+.productos-tendencias-totales {
+  margin: 0 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
 }

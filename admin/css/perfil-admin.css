@@ -1,0 +1,155 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4{
+    font-family: var(--fuenteHeading);
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+
+.no-margin{
+    margin: 0; 
+}
+.no-padding{
+    padding: 0;
+}
+.centrar-texto{
+    text-align: center;
+}
+
+.titulo-texto{
+    margin: 4rem 0 5rem 0;
+}
+
+.contenedor-datos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.contenedor-datos img{
+    max-width: 60%;
+}
+
+.contenedor-datos__texto{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.datos-texto{
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.datos{
+    margin: 3rem;
+}
+
+.datos-input{
+    min-width: 50%;
+    border: none;
+    border: 1px solid ;
+    height: 3rem;
+}
+
+.datos-input__email{
+    min-width: 70%;
+}
+
+.boton__agregar{
+    display: inline-block;
+    margin: 3rem 0;
+    background-color: rgb(104, 180, 29);
+    width: 20rem;
+    padding: 1rem 0;
+    border-radius: 0.7rem;
+    color: white;
+    cursor: pointer;
+}
+
+.boton__agregar label{
+    cursor: pointer;
+}
+
+.contenedor-botones{
+    cursor: pointer;
+}
+
+.seleccionar-foto{
+    margin-top: 4rem;
+    font-size: 2rem;
+}
+
+main.contenedor-datos {
+    background-color: #f8f9fa;
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-datos__foto img {
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.datos-input {
+    background-color: #f8f9fa;
+    padding: 0.7rem 1rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.5rem;
+    transition: border-color 0.3s;
+}
+
+.boton__agregar {
+    background-color: #007bff;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.boton__agregar:hover {
+    background-color: #0056b3;
+}
+
+.titulo-texto {
+    font-size: 3.6rem;
+    color: #343a40;
+    margin-bottom: 2rem;
+}

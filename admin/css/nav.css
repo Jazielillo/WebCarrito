@@ -1,0 +1,108 @@
+.contenedor-arriba {
+    background-color: #cc2747;
+  }
+  
+  .navegacion {
+    display: flex;
+    height: 12rem;
+    justify-content: space-around;
+  }
+  
+  .nav-imagen {
+    margin-top: 0.95rem;
+  }
+  
+  .foto-perfil {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 10rem;
+  }
+  
+  .foto-perfil img {
+    width: 10rem;
+    height: auto;
+  }
+  
+  .buscar {
+    width: 60rem;
+    margin-left: 10rem;
+    border: none;
+    height: 4rem;
+    border-radius: 0.5rem;
+    -webkit-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.75);
+  }
+  
+  .derecha {
+    margin: 0 8rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding-right: 4rem;
+  }
+  
+  .flex-cel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+  }
+  
+  .icono-celular {
+    display: flex;
+  }
+  
+  .icono-celular img {
+    width: 4rem;
+    height: auto;
+  }
+  
+  .icono-celular p {
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+  
+  .icono-perfil {
+    display: flex;
+  }
+  
+  .flex-perfil {
+    flex-direction: column;
+  }
+  
+  .icono-perfil img {
+    width: 6rem;
+    height: auto;
+  }
+  
+  .icono-perfil p {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+  
+  .icono-carrito {
+    display: flex;
+  }
+  
+  .icono-carrito img {
+    width: 6rem;
+    height: auto;
+  }
+  
+  .icono-carrito p {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  
+  .iconos {
+    font-size: 2rem;
+  }
+  
+  .iconos svg {
+    height: 6rem;
+    width: 6rem;
+  }
