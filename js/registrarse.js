@@ -64,16 +64,16 @@ async function registrarUsuario() {
       // Crear un objeto con los datos obtenidos
       enviarCorreo(idUsuario);
 
-      // await subirInformacion(
-      //   "Usuarios",
-      //   nombre,
-      //   null,
-      //   idUsuario,
-      //   edad,
-      //   contrasena,
-      //   usuario,
-      //   email
-      // );
+      await subirInformacion(
+        "Usuarios",
+        nombre,
+        null,
+        idUsuario,
+        edad,
+        contrasena,
+        usuario,
+        email
+      );
 
       // setTimeout(() => {
       //   window.location.href = "../html/login.html"; // Cambia esto por la ruta de tu página principal
@@ -203,15 +203,19 @@ function enviarCorreo(id) {
 
   // Obtener la URL actual
 
-  let idEncriptado = cifradoCesar(toString(id), 3);
+  let auxiliar = "id=" + id;
 
-  let urlActual = window.location.href + `?id=${idEncriptado}`;
+  let idEncriptado = cifradoCesar(auxiliar, 3);
+
+  let urlActual = window.location.href;
 
   // Verificar si la URL termina con "registrarse.html"
   if (urlActual.endsWith("registrarse.html")) {
     // Reemplazar "registrarse.html" con "login.html"
-    urlActual = urlActual.replace("registrarse.html", "login.html");
+    urlActual = urlActual.replace("registrarse.html", "validacionCorreo.html");
   }
+
+  urlActual += `?${idEncriptado}`;
 
   const serviceID = "default_service";
   const templateID = "template_ryp16yk";
@@ -241,14 +245,25 @@ function cifradoCesar(texto, clave) {
   for (var i = 0; i < texto.length; i++) {
       var charCode = texto.charCodeAt(i);
       if (charCode !== 32) { // Ignorar espacios
-          if (charCode >= 65 && charCode <= 90) {
-              textoEncriptado += String.fromCharCode(((charCode - 65 + clave) % 26) + 65); // Para letras mayúsculas
-          } else if (charCode >= 97 && charCode <= 122) {
-              textoEncriptado += String.fromCharCode(((charCode - 97 + clave) % 26) + 97); // Para letras minúsculas
-          } else {
-              textoEncriptado += texto.charAt(i); // Mantener caracteres no alfabéticos sin cambios
-          }
+          textoEncriptado += String.fromCharCode((charCode + clave) % 65536); // Cifrado para todos los caracteres
+      } else {
+          textoEncriptado += ' '; // Mantener espacios sin cambios
       }
   }
-  return textoEncriptado;
+  return encodeURIComponent(textoEncriptado);
+}
+
+
+function descifradoCesar(textoCifrado, clave) {
+  var textoDescifrado = "";
+  for (var i = 0; i < textoCifrado.length; i++) {
+    var charCode = textoCifrado.charCodeAt(i);
+    if (charCode !== 32) {
+      // Ignorar espacios
+      textoDescifrado += String.fromCharCode((charCode - clave + 256) % 256); // Desplazamiento inverso
+    } else {
+      textoDescifrado += " "; // Mantener espacios sin cambios
+    }
+  }
+  return textoDescifrado;
 }
