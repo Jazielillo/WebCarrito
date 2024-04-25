@@ -122,3 +122,27 @@ img{
   text-align: center;
   margin-top: 20rem;
 }
+
+/* aa */
+
+.leidos-contenedor{
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.leidos-boton{
+  font-size: 2.2rem;
+  padding: 0.5rem;
+  border: 0.2rem solid black;
+  box-shadow: 2px 5px 5px -3px rgba(0,0,0,0.75);
+}
+
+.leidos-boton:active {
+  background-color: lightblue;
+  color: white;
+}
+
+.separacion{
+  border-left: 0;
+}
