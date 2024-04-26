@@ -155,7 +155,8 @@ export async function verificarCredenciales(nombre, pass) {
   const q1 = query(
     citiesRef,
     where("usuario", "==", nombre),
-    where("password", "==", pass)
+    where("password", "==", pass),
+    where("estatus", "==", "activo")
   );
 
   try {
@@ -287,6 +288,15 @@ export async function obtenerTodosLosDocumentos(tabla) {
 
 export async function modificarEstatus(id, estatus) {
   const washingtonRef = doc(firestore, "Productos", `${id}`);
+
+  // Set the "capital" field of the city 'DC'
+  await updateDoc(washingtonRef, {
+    estatus,
+  });
+}
+
+export async function modificarEstatusUsuario(id, estatus) {
+  const washingtonRef = doc(firestore, "Usuarios", `${id}`);
 
   // Set the "capital" field of the city 'DC'
   await updateDoc(washingtonRef, {
