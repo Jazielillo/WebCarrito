@@ -15,7 +15,6 @@ html {
 }
 
 body{
-  font-family: var(--fuenteParrafos);
   font-size: 1.6rem;
   line-height: 1.2;
   font-family: "Montserrat", sans-serif;
@@ -129,20 +128,63 @@ img{
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+  margin-bottom: 5rem;
+  column-gap: 1rem;
 }
 
 .leidos-boton{
   font-size: 2.2rem;
   padding: 0.5rem;
-  border: 0.2rem solid black;
-  box-shadow: 2px 5px 5px -3px rgba(0,0,0,0.75);
-}
-
-.leidos-boton:active {
-  background-color: lightblue;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
   color: white;
+  font-weight: 700;
+  padding: 0.6rem;
 }
 
 .separacion{
   border-left: 0;
+}
+
+.contenedor-mensaje{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 1rem;
+  margin: 2rem 0;
+}
+
+.bandeja{
+  max-width: 35rem;
+  border: 1px solid rgba(255, 15, 15, 0.527);
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  box-shadow: 0px 0px 40px -3px rgba(255, 15, 15, 0.527);
+  border-radius: 1.2rem;
+}
+
+.contenedor-mensaje_imagen{
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.contenedor-mensaje_imagen img{
+  max-width: 6rem;
+  height: 6rem;
+}
+
+.contenedor-mensaje_info{
+  display: block;
+  text-align: left;
+  margin-top: 0.5rem;
+  max-width: 18rem;
+}
+
+.mensaje-nombre{
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.mensaje-correo{
+  color: #5e5e5e;
 }
