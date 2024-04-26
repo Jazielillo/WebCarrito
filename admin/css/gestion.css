@@ -129,6 +129,7 @@ img{
   margin-top: 2rem;
   display: flex;
   justify-content: center;
+  margin-bottom: 5rem;
 }
 
 .leidos-boton{
@@ -138,11 +139,37 @@ img{
   box-shadow: 2px 5px 5px -3px rgba(0,0,0,0.75);
 }
 
-.leidos-boton:active {
-  background-color: lightblue;
-  color: white;
-}
-
 .separacion{
   border-left: 0;
+}
+
+.contenedor-mensajes{
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.contenedor-lista-mensajes{
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+.contenedor-lista-mensajes br{
+  border: 1px solid black;
+}
+
+
+.mensaje-lista{
+  display: flex;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+.imagen-mensaje{
+  max-width: 4rem;
+  opacity: 60%;
+}
+
+.nombre-mensaje{
+  margin-left: 2rem;
 }
