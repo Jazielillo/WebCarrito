@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de Productos</title>
-    
+
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/gestion.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/normalize.css">
+    <script src="https://kit.fontawesome.com/9834f61985.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="container">
         <div class="contenedor-arriba">
@@ -22,7 +26,7 @@
                 </div>
 
                 <div class="icono-perfil">
-                    <a href="" class="flex-cel flex-perfil">
+                    <a href="perfil-admin.html" class="flex-cel flex-perfil">
                         <img src="../img/user.png" alt="">
                         <p id="nombre">Admin</p>
                     </a>
@@ -30,7 +34,7 @@
 
                 <div class="icono-carrito">
                     <a href="../html/mensajes.html" class="flex-cel flex-perfil">
-                        <img src="../img/mensaje.png" alt="">
+                        <img src="../../img/mensaje.png" alt="">
                         <p>Mensajes</p>
                     </a>
                 </div>
@@ -47,63 +51,30 @@
 
 
         <div class="leidos-contenedor contenedor ">
-            <div class="leidos-boton">
-                <p>Vistos</p>
+            <div class="leidos leidos-boton">
+                <p>Leidos</p>
+                <div class="contador" id="leido"></div>
             </div>
-            <div class="leidos-boton separacion">
-                <p>No Vistos</p>
+            <div class="no-leidos leidos-boton separacion">
+                <p>No leidos</p>
+                <div class="contador" id="no-leido"></div>
             </div>
         </div>
 
         <main class="bandeja contenedor centrar-texto">
-            <div class="contenedor-mensaje">
-                <div class="contenedor-mensaje_imagen">
-                    <img src="../img/user.png" alt="">
-                </div>
-                <div class="contenedor-mensaje_info">
-                    <p class="mensaje-nombre">Nombre 1</p>
-                    <p class="mensaje-correo">jesus123@gmail.com</p>
-                </div>
-            </div>
-            <div class="contenedor-mensaje">
-                <div class="contenedor-mensaje_imagen">
-                    <img src="../img/user.png" alt="">
-                </div>
-                <div class="contenedor-mensaje_info">
-                    <p class="mensaje-nombre">Jesus Jaziel Heredia Dimas</p>
-                    <p class="mensaje-correo">jazielheredia123@gmail.com</p>
-                </div>
-            </div>
-            <div class="contenedor-mensaje">
-                <div class="contenedor-mensaje_imagen">
-                    <img src="../img/user.png" alt="">
-                </div>
-                <div class="contenedor-mensaje_info">
-                    <p class="mensaje-nombre">Nombre 1</p>
-                    <p class="mensaje-correo">jesus123@gmail.com</p>
-                </div>
-            </div>
-            <div class="contenedor-mensaje">
-                <div class="contenedor-mensaje_imagen">
-                    <img src="../img/user.png" alt="">
-                </div>
-                <div class="contenedor-mensaje_info">
-                    <p class="mensaje-nombre">Nombre 1</p>
-                    <p class="mensaje-correo">jesus123@gmail.com</p>
-                </div>
-            </div>
-            <div class="contenedor-mensaje">
-                <div class="contenedor-mensaje_imagen">
-                    <img src="../img/user.png" alt="">
-                </div>
-                <div class="contenedor-mensaje_info">
-                    <p class="mensaje-nombre">Nombre 1</p>
-                    <p class="mensaje-correo">jesus123@gmail.com</p>
-                </div>
-            </div>
+
         </main>
-        
+
     </div>
 
 
-</body></html>
+</body>
+<script src="../js/mensajes.js" type="module"></script>
+<script src="../js/comprobarAdmin.js"></script>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('ctT4IaQ1HSWYeUNKz')
+</script>
+</html>

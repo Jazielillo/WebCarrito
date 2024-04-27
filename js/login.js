@@ -87,6 +87,7 @@ async function validarLogin() {
     contrasenaInput
   );
 
+
   if (credencialesValidas) {
     // Las credenciales son válidas, continuar con el inicio de sesión
     if (adminstradorValido) {

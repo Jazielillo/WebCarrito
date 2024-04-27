@@ -129,7 +129,16 @@ export async function subirInformacion(
       usuario: dato3,
       email: dato4,
       carrito: {},
-      estatus: "inactivo"
+      estatus: "inactivo",
+    };
+    await setDoc(doc(firestore, `${tabla}`, `${id}`), data);
+  } else if (tabla === "Mensajes") {
+    data = {
+      nombre: titulo,
+      email: dato2,
+      mensaje: dato1,
+      situacionMensaje: "no-leido",
+      id,
     };
     await setDoc(doc(firestore, `${tabla}`, `${id}`), data);
   }
@@ -301,6 +310,15 @@ export async function modificarEstatusUsuario(id, estatus) {
   // Set the "capital" field of the city 'DC'
   await updateDoc(washingtonRef, {
     estatus,
+  });
+}
+
+export async function modificarEstatusMensaje(id, situacionMensaje) {
+  const washingtonRef = doc(firestore, "Mensajes", `${id}`);
+
+  // Set the "capital" field of the city 'DC'
+  await updateDoc(washingtonRef, {
+    situacionMensaje,
   });
 }
 
@@ -535,4 +553,8 @@ export async function eliminarCarrito(id) {
   });
 
   console.log("Colección de carrito eliminada correctamente.");
+}
+
+export async function eliminarMensaje(id) {
+  await deleteDoc(doc(firestore, "Mensajes", `${id}`));
 }
