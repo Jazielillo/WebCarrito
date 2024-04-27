@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/gestion.css">
     <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <script src="https://kit.fontawesome.com/9834f61985.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/alta-usuarios.css">
+
 </head>
 
 <body>
+    <div class="mensaje" id="mensajeDiv"></div>
     <div class="container">
         <div class="contenedor-arriba">
             <nav class="navegacion header">
@@ -56,32 +57,47 @@
         </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
 
 
+        <h2 class="titulo-texto centrar-texto contenedor-datos">Dar de alta Usuario</h2>
 
-        <div class="leidos-contenedor contenedor ">
-            <div class="leidos leidos-boton">
-                <p>Leidos</p>
-                <div class="contador" id="leido"></div>
+        <main class="contenedor-datos contenedor">
+            <div class="contenedor-datos__foto">
+                <img src="/img/user.png" alt="">
             </div>
-            <div class="no-leidos leidos-boton separacion">
-                <p>No leidos</p>
-                <div class="contador" id="no-leido"></div>
+            <div class="contenedor-datos__texto">
+                <div class="contenedor-datos__nombre datos">
+                    <label class="datos-texto" for="nombreAdmin">Nombre </label>
+                    <input class="datos-input" type="text" id="nombreAdmin">
+                </div>
+                <div class="contenedor-datos__usuario datos">
+                    <label class="datos-texto" for="usuario">Usuario </label>
+                    <input class="datos-input" type="text" id="usuario">
+                </div>
+                <div class="contenedor-datos__contraseña datos">
+                    <label class="datos-texto" for="contraseña">Contraseña </label>
+                    <input class="datos-input" type="password" id="contraseña">
+                </div>
+                <div class="contenedor-datos__correo datos">
+                    <label class="datos-texto" for="email">Email </label>
+                    <input class="datos-input datos-input__email" type="email" id="email">
+                </div>
+
+                <div class="contenedor-datos__edad datos">
+                    <label class="datos-texto" for="edad">Edad </label>
+                    <input class="datos-input datos-input__email" type="number" id="edad">
+                </div>
+
+                <div class="contenedor-botones">
+                    <div class="boton__agregar" id="btnModificar">
+                        Aceptar
+                    </div>
+                </div>
+
             </div>
-        </div>
-
-        <main class="bandeja contenedor centrar-texto">
-
         </main>
 
     </div>
 
 
 </body>
-<script src="../js/mensajes.js" type="module"></script>
-<script src="../js/comprobarAdmin.js"></script>
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script type="text/javascript">
-  emailjs.init('ctT4IaQ1HSWYeUNKz')
-</script>
 </html>
