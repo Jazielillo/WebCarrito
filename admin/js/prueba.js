@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDwkhwJW0W63BLCik72IRqAL9EOhIsmoko",
-  authDomain: "fir-df1ec.firebaseapp.com",
-  projectId: "fir-df1ec",
-  storageBucket: "fir-df1ec.appspot.com",
-  messagingSenderId: "775054586512",
-  appId: "1:775054586512:web:cf8bc09020c2f184a95e15",
+  apiKey: "AIzaSyCK7zVWPLge96q_bkh1gvPJJNqeCnqslfE",
+  authDomain: "carrito-compras-1367a.firebaseapp.com",
+  projectId: "carrito-compras-1367a",
+  storageBucket: "carrito-compras-1367a.appspot.com",
+  messagingSenderId: "1094106728627",
+  appId: "1:1094106728627:web:9855e103bb9b178c2648c6",
 };
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
@@ -129,6 +129,7 @@ export async function subirInformacion(
       usuario: dato3,
       email: dato4,
       carrito: {},
+      compras: {},
       estatus: "inactivo",
     };
     await setDoc(doc(firestore, `${tabla}`, `${id}`), data);
@@ -139,6 +140,15 @@ export async function subirInformacion(
       mensaje: dato1,
       situacionMensaje: "no-leido",
       id,
+    };
+    await setDoc(doc(firestore, `${tabla}`, `${id}`), data);
+  } else if (tabla === "Compras") {
+    data = {
+      fecha: titulo,
+      productos: dato2,
+      id,
+      usuario:dato1,
+      totalVenta:dato3
     };
     await setDoc(doc(firestore, `${tabla}`, `${id}`), data);
   }
@@ -558,3 +568,5 @@ export async function eliminarCarrito(id) {
 export async function eliminarMensaje(id) {
   await deleteDoc(doc(firestore, "Mensajes", `${id}`));
 }
+
+export async function crearCompraUsuario(id) {}

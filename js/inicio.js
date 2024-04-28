@@ -6,8 +6,10 @@ import {
 
 let productosPintados = [];
 let productosAlmacenados;
-let contador = 0;
-let paginaActual = 0; // Variable para controlar la página actual
+let contador = 0,
+  valorActual = 6,
+  paginasTotales = 0, 
+  paginaActual = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
   cargarProductos();
@@ -16,17 +18,38 @@ document.addEventListener("DOMContentLoaded", () => {
   eventoPaginacion();
 });
 
+function limpiarDiv(clase) {
+  let div = document.querySelector(`.${clase}`);
+
+  // Eliminar todos los hijos excepto el primero
+  while (div.childElementCount > 0) {
+    div.removeChild(div.lastElementChild);
+  }
+}
+
 function eventoPaginacion() {
   let flechaIzquierda = document.querySelector(".flecha-izquierda"),
     flechaDerecha = document.querySelector(".flecha-derecha");
 
-  // flechaIzquierda.addEventListener("click", () => {
-  //   paginaAnterior();
-  // });
+  flechaIzquierda.addEventListener("click", () => {
+    if (valorActual > 0 && paginaActual > 0) {
+      limpiarDiv("productos-tendencias-totales");
+      contador -= (valorActual * paginaActual);
+      valorActual -= 6;
+      paginaActual--;
+      paginacionProductos();
+    }
+  });
 
-  // flechaDerecha.addEventListener("click", () => {
-  //   siguientePagina();
-  // });
+  flechaDerecha.addEventListener("click", () => {
+    let maximoPagina = paginasTotales * 5;
+    if (valorActual < maximoPagina) {
+      limpiarDiv("productos-tendencias-totales");
+      paginaActual++;
+      valorActual += 6;
+      paginacionProductos();
+    }
+  });
 }
 
 function ponerUsuario() {
@@ -86,7 +109,7 @@ async function cargarProductos(palabraBusqueda) {
     if (noHay === 0) {
       noHayProductos();
     }
-
+    paginasTotales = Math.round(productosAlmacenados.length / 6);
     paginacionProductos(); // Llamada a la función de paginación después de que productosPintados esté listo
   } catch (error) {
     // Manejar errores aquí
@@ -95,45 +118,21 @@ async function cargarProductos(palabraBusqueda) {
 }
 
 async function paginacionProductos() {
-  await cargarProductos(); // Esperar a que cargarProductos termine de cargar los productos
-
-  // Calcular el rango de índices de los productos a mostrar en la página actual
-  let inicio = paginaActual * 6; // Suponiendo que cada página muestra 6 productos
-  let fin = inicio + 5; // Fin del rango
-
-  console.log(inicio, fin)
-
-  // Verificar si el rango está dentro de los límites del arreglo productosPintados
-  if (inicio >= 0 && fin < productosPintados.length) {
-    console.log("hola");
-    let productosPaginaActual = productosPintados.slice(inicio, fin + 1); // Obtener los productos de la página actual
-    productosPaginaActual.forEach((producto) => {
-      pintarProductos(
-        producto[0],
-        producto[1],
-        producto[2],
-        productosAlmacenados
-      );
-    });
-  } else {
-    console.log("No hay más productos para mostrar en esta página.");
+  for (let i = contador; i < valorActual; i++) {
+    let el = productosPintados[i];
+    if (contador < valorActual) {
+      if (el) {
+        pintarProductos(el[0], el[1], el[2], productosAlmacenados);
+        contador++;
+      } else {
+        contador++;
+      }
+    } else {
+      break;
+    }
   }
-}
 
-// Función para avanzar a la siguiente página
-function siguientePagina() {
-  paginaActual++;
-  paginacionProductos();
-}
-
-// Función para retroceder a la página anterior
-function paginaAnterior() {
-  if (paginaActual > 0) {
-    paginaActual--;
-    paginacionProductos();
-  } else {
-    console.log("Ya estás en la primera página.");
-  }
+  console.log(contador, valorActual);
 }
 
 function pintarProductos(foto, nombre, id, productosAlmacenados) {

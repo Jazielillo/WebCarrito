@@ -4,19 +4,21 @@ import {
   obtenerCarrito,
   obtenerTodosLosDocumentos,
   movimientosCarrito,
+  subirInformacion,
   ventaCarrito,
   eliminarCarrito,
 } from "../admin/js/prueba.js";
 let _carrito = document.querySelector(".productos-totales");
 let totalCompra = 0;
 let cantProd = 0;
+let productosPrecios = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   cargarProductos();
   ponerUsuario();
 });
 
-function ponerUsuario(){
+function ponerUsuario() {
   let usuario = localStorage.getItem("usuarioActual");
   let p = document.getElementById("nombre");
 
@@ -51,6 +53,15 @@ async function cargarProductos() {
     });
 }
 
+function obtenerPrecios() {
+  let precios = document.querySelectorAll(".precioTotal");
+  precios.forEach((el) => {
+    let nombreWE = el.innerText.replace(/\$/g, "");
+    let auxP = parseInt(nombreWE);
+    productosPrecios.push(auxP);
+  });
+}
+
 function pintarMiCosa(url, carrito, idUsuario) {
   //AGARRAR MI CARRITO
 
@@ -78,16 +89,59 @@ function pintarMiCosa(url, carrito, idUsuario) {
   }
 }
 
+function regresarFechaHumano() {
+  // Obtener la fecha actual
+  const fechaActual = new Date();
+  console.log(fechaActual);
+  // Obtener el día, mes y año por separado
+  const dia = fechaActual.getDate();
+  const mes = fechaActual.getMonth() + 1; // Nota: Los meses empiezan en 0
+  const anio = fechaActual.getFullYear();
+
+  // Crear una cadena de texto con la fecha en el formato deseado (DD/MM/AAAA)
+  return `${dia}/${mes}/${anio}`;
+}
+
 async function realizarInventario(idUsuario) {
-  //ocupo conseguir las cantidades de los productos vendidos, y su id;
+  // Obtener las cantidades de los productos vendidos y sus IDs
   let cantidad = document.querySelectorAll(".cantidad");
 
-  cantidad.forEach(async el => {
-    await ventaCarrito(idUsuario, parseInt(el.classList[1]), parseInt(el.innerText));
-  })
+  let productos = [];
+  obtenerPrecios();
+  console.log(productosPrecios)
+  let cc = 0;
+  // Iterar sobre las cantidades con un bucle for...of
+  for (const el of cantidad) {
+    // Esperar a que se complete la venta del producto actual
+    await ventaCarrito(
+      idUsuario,
+      parseInt(el.classList[1]),
+      parseInt(el.innerText)
+    );
+    productos.push({
+      id: parseInt(el.classList[1]),
+      cantidad: parseInt(el.innerText),
+      totalCompra: productosPrecios[cc],
+    });
+    cc++;
+  }
 
+  const horaActual = new Date();
+  const idCompra = horaActual.getTime();
+
+  let totalVenta = productosPrecios.reduce((acumulador, numero) => acumulador + numero, 0)
+  // Esperar a subir la información después de haber recopilado los productos
+  await subirInformacion(
+    "Compras",
+    regresarFechaHumano(),
+    null,
+    idCompra,
+    idUsuario,
+    productos,
+    totalVenta
+  );
   await eliminarCarrito(idUsuario);
-  mostrarModal("Compra realizada correctamente")
+  mostrarModal("Compra realizada correctamente");
   limpiarDiv("productos-totales");
 }
 
@@ -187,41 +241,41 @@ async function movimientoCarrito(operacion, id, idUsuario) {
   await ponerDatosNuevos(id, idUsuario);
 }
 
-async function ponerDatosNuevos(id, idUsuario){
-  let cantidad = document.querySelectorAll('.cantidad');
+async function ponerDatosNuevos(id, idUsuario) {
+  let cantidad = document.querySelectorAll(".cantidad");
   let cantidadModificable;
   let carrito = await obtenerCarrito(idUsuario);
-  
+
   let cantidadTotalProducto = document.querySelectorAll(".precioTotal");
 
-  cantidad.forEach(el => {
-    if(el.classList.contains(id)){
+  cantidad.forEach((el) => {
+    if (el.classList.contains(id)) {
       cantidadModificable = el;
     }
-  })
+  });
 
   let cantidadExacta;
   let precio;
 
-  carrito.forEach(el => {
-    if(parseInt(el.id) === id){
+  carrito.forEach((el) => {
+    if (parseInt(el.id) === id) {
       cantidadExacta = el.data.cantidad;
       precio = el.data.precio;
     }
-  })
+  });
 
   cantidadModificable.innerText = `${cantidadExacta}`;
 
-  cantidadTotalProducto.forEach(el => {
-    if(el.classList.contains(id)){
+  cantidadTotalProducto.forEach((el) => {
+    if (el.classList.contains(id)) {
       cantidadModificable = el;
     }
-  })
-  
+  });
+
   let totalProducto = parseInt(cantidadExacta) * parseInt(precio);
 
-  cantidadModificable.innerText = `$${totalProducto}`
-  
+  cantidadModificable.innerText = `$${totalProducto}`;
+
   //ponerTotal
 
   let htmlCantidad = document.querySelectorAll(".cantidad");
@@ -232,22 +286,22 @@ async function ponerDatosNuevos(id, idUsuario){
 
   let locuraCantidad = [];
 
-  htmlCantidad.forEach(el => {
+  htmlCantidad.forEach((el) => {
     let auxP = parseInt(el.innerText);
     locuraCantidad.push(auxP);
-  })
+  });
 
   let locuraPrecio = [];
 
-  htmlPrecio.forEach(el => {
-    let nombreWE = el.innerText.replace(/\$/g, '');
+  htmlPrecio.forEach((el) => {
+    let nombreWE = el.innerText.replace(/\$/g, "");
     let auxP = parseInt(nombreWE);
     locuraPrecio.push(auxP);
-  })
+  });
 
   let cantidadVenta = document.getElementById("cantidadFinal");
   let auxVenta = 0;
-  
+
   for (let i = 0; i < locuraCantidad.length; i++) {
     auxVenta += locuraPrecio[i];
   }
