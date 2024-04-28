@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion de Productos</title>
-
+    <title>Gestion de Usuarios</title>
     <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/gestion.css">
     <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../../css/iniciocss.css">
+    <link rel="stylesheet" href="../../css/configuracion.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../css/gestion.css">
+    <link rel="stylesheet" href="../css/gestion-productos.css">
     <link rel="stylesheet" href="../css/modificar-usuarios.css">
     <script src="https://kit.fontawesome.com/9834f61985.js" crossorigin="anonymous"></script>
-
 </head>
-
 <body>
     <div class="mensaje" id="mensajeDiv"></div>
     <div class="container">
@@ -47,7 +47,7 @@
                         <p>Gestionar Usuarios</p>
                     </a>
                 </div>
-
+                
                 <div class="icono-carrito">
                     <a href="../html/gestion.html" class="flex-cel flex-perfil">
                         <img src="../img/caja.png" alt="">
@@ -57,62 +57,31 @@
             </nav>
         </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
 
+    </div>
 
-        <h2 class="titulo-texto centrar-texto contenedor-datos">Modificar Usuarios</h2>
 
-        <main class="contenedor-datos contenedor">
 
-            <div class="container-busqueda">
-                <div class="container-busqueda_arriba">
-                    <input class="barra_busqueda" type="text" id="searchInput" placeholder="Buscar usuario...">
+    
+
+
+    <div class="contenedor-principal">
+        <h2 class="titulo-izquierda">Modificar Usuarios</h2>
+        <form class="formularios-alta-productos">
+            
+            <div class="contenedor-busqueda">
+                <div class="contenedor-busqueda-arriba">
+                    <div class="contenedor-buscador contenedor-buscador2">
+                        <div class="nav-buscador contenedor-buscador2" >
+                            <input type="text" id="searchInput" placeholder="Buscar usuarios...">
+                            <button onclick="buscar()"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
                 </div>
-                <div class="container-busqueda_lista">
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Jesus Jaziel Heredia Dimas <span class="nombre_usuario">(Jexbii)</span></p>
-                    </div>
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Buelna Servin Jesus Enrique <span class="nombre_usuario">(Aniquil4d0r)</span></p>
-                    </div>
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Betanpollas Soto <span class="nombre_usuario">(Elderivadas)</span></p>
-                    </div>
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Apodaca Orlando Hoyos Armando <span class="nombre_usuario">(Leche)</span></p>
-                    </div>
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Jesus Jaziel Heredia Dimas <span class="nombre_usuario">(Jexbii)</span></p>
-                    </div>
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Buelna Servin Jesus Enrique <span class="nombre_usuario">(Aniquil4d0r)</span></p>
-                    </div>
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Betanpollas Soto <span class="nombre_usuario">(Elderivadas)</span></p>
-                    </div>
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Apodaca Orlando Hoyos Armando <span class="nombre_usuario">(Leche)</span></p>
-                    </div>
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Jesus Jaziel Heredia Dimas <span class="nombre_usuario">(Jexbii)</span></p>
-                    </div>
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Buelna Servin Jesus Enrique <span class="nombre_usuario">(Aniquil4d0r)</span></p>
-                    </div>
-                    <div class="usuario-lista">
-                        <img src="../img/user.png" alt="">
-                        <p>Betanpollas Soto <span class="nombre_usuario">(Elderivadas)</span></p>
-                    </div>
+
+                <div class="busqueda-productos">
                     
                 </div>
+
             </div>
 
             <div class="contenedor-datos__texto">
@@ -145,11 +114,11 @@
                 </div>
 
             </div>
-        </main>
 
+            
+        </form>
     </div>
-
-
+<script src="../js/modificarProductos.js" type="module"></script>
+<script src="../js/comprobarAdmin.js"></script>
 </body>
-
 </html>
