@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion de Productos</title>
-
+    
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/gestion.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/normalize.css">
-    <script src="https://kit.fontawesome.com/9834f61985.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
     <div class="container">
         <div class="contenedor-arriba">
@@ -56,32 +52,25 @@
         </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
 
 
-
-        <div class="leidos-contenedor contenedor ">
-            <div class="leidos leidos-boton">
-                <p>Leidos</p>
-                <div class="contador" id="leido"></div>
-            </div>
-            <div class="no-leidos leidos-boton separacion">
-                <p>No leidos</p>
-                <div class="contador" id="no-leido"></div>
-            </div>
-        </div>
-
-        <main class="bandeja contenedor centrar-texto">
-
+        <!-- ICONOS ALTA / BAJA / MODIFICAR -->
+        <main class="contenedor-gestion contenedor centrar-texto">
+            <a class="panel-añadir panel" href="alta-usuarios.html">
+                <img class="imagen" src="../img/agregar-usuario.png" alt="añadirFoto">
+                <div class="texto">Dar de alta Usuario</div>
+            </a>
+            <a class="panel-modificar panel" href="modificar-usuarios.html">
+                <img class="imagen" src="../img/modificar-usuario.png" alt="modificarFoto">
+                <div class="texto">Modificar Usuarios</div>
+            </a>
+            <a class="panel-eliminar panel" href="baja-usuarios.html">
+                <img class="imagen" src="../img/eliminar-usuario.png" alt="eliminarFoto">
+                <div class="texto">Dar de baja Usuarios</div>
+            </a>
         </main>
 
     </div>
 
 
 </body>
-<script src="../js/mensajes.js" type="module"></script>
 <script src="../js/comprobarAdmin.js"></script>
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  emailjs.init('ctT4IaQ1HSWYeUNKz')
-</script>
 </html>

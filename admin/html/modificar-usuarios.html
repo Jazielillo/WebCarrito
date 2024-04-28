@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/gestion.css">
     <link rel="stylesheet" href="../css/nav.css">
-    <link rel="stylesheet" href="../css/perfil-admin.css">
+    <link rel="stylesheet" href="../css/modificar-usuarios.css">
+    <script src="https://kit.fontawesome.com/9834f61985.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -57,12 +58,63 @@
         </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
 
 
-        <h2 class="titulo-texto centrar-texto">Información del Administrador</h2>
+        <h2 class="titulo-texto centrar-texto contenedor-datos">Modificar Usuarios</h2>
 
         <main class="contenedor-datos contenedor">
-            <div class="contenedor-datos__foto">
-                <img src="/img/user.png" alt="">
+
+            <div class="container-busqueda">
+                <div class="container-busqueda_arriba">
+                    <input class="barra_busqueda" type="text" id="searchInput" placeholder="Buscar usuario...">
+                </div>
+                <div class="container-busqueda_lista">
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Jesus Jaziel Heredia Dimas <span class="nombre_usuario">(Jexbii)</span></p>
+                    </div>
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Buelna Servin Jesus Enrique <span class="nombre_usuario">(Aniquil4d0r)</span></p>
+                    </div>
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Betanpollas Soto <span class="nombre_usuario">(Elderivadas)</span></p>
+                    </div>
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Apodaca Orlando Hoyos Armando <span class="nombre_usuario">(Leche)</span></p>
+                    </div>
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Jesus Jaziel Heredia Dimas <span class="nombre_usuario">(Jexbii)</span></p>
+                    </div>
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Buelna Servin Jesus Enrique <span class="nombre_usuario">(Aniquil4d0r)</span></p>
+                    </div>
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Betanpollas Soto <span class="nombre_usuario">(Elderivadas)</span></p>
+                    </div>
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Apodaca Orlando Hoyos Armando <span class="nombre_usuario">(Leche)</span></p>
+                    </div>
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Jesus Jaziel Heredia Dimas <span class="nombre_usuario">(Jexbii)</span></p>
+                    </div>
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Buelna Servin Jesus Enrique <span class="nombre_usuario">(Aniquil4d0r)</span></p>
+                    </div>
+                    <div class="usuario-lista">
+                        <img src="../img/user.png" alt="">
+                        <p>Betanpollas Soto <span class="nombre_usuario">(Elderivadas)</span></p>
+                    </div>
+                    
+                </div>
             </div>
+
             <div class="contenedor-datos__texto">
                 <div class="contenedor-datos__nombre datos">
                     <label class="datos-texto" for="nombreAdmin">Nombre </label>
@@ -88,11 +140,7 @@
 
                 <div class="contenedor-botones">
                     <div class="boton__agregar" id="btnModificar">
-                        Modificar datos
-                    </div>
-
-                    <div class="boton__agregar" id="btnCerrar">
-                        Cerrar sesion
+                        Modificar
                     </div>
                 </div>
 
@@ -103,6 +151,5 @@
 
 
 </body>
-<script src="../js/admin.js" type="module"></script>
-<script src="../js/comprobarAdmin.js"></script>
+
 </html>
