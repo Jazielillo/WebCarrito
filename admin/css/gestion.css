@@ -68,8 +68,8 @@ img {
 
 .contenedor-gestion {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-top: 15rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 5rem;
 }
 
 .panel {
@@ -94,7 +94,7 @@ img {
 }
 
 .imagen {
-  width: 512px;
+  width: 300px;
   height: auto;
 }
 .mensaje {
