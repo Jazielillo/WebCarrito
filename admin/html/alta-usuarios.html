@@ -74,7 +74,7 @@
                 </div>
                 <div class="contenedor-datos__contraseña datos">
                     <label class="datos-texto" for="contraseña">Contraseña </label>
-                    <input class="datos-input" type="password" id="contraseña">
+                    <input class="datos-input" type="password" id="password">
                 </div>
                 <div class="contenedor-datos__correo datos">
                     <label class="datos-texto" for="email">Email </label>
@@ -99,5 +99,11 @@
 
 
 </body>
+<script src="../js/alta-usuarios.js" type="module"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    emailjs.init('ctT4IaQ1HSWYeUNKz')
+</script>
 
 </html>
