@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function cerrarSesion() {
   mostrarModal("Cerrando sesion...");
-  window.location.href = "../../html/login.html";
+  window.location.href = "../html/login.html";
 }
 
 async function llenarDatos() {
