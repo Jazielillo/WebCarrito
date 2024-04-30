@@ -102,6 +102,6 @@ async function modificarAdmin() {
       email.value,
       id
     );
-    mostrarModal("Perfil de admin, modificado correctamente :D");
+    mostrarModal("Perfil de Usuario, modificado correctamente :D");
   }
 }
