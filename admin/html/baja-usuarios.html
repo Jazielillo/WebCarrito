@@ -87,29 +87,30 @@
             <div class="contenedor-datos__texto">
                 <div class="contenedor-datos__nombre datos">
                     <label class="datos-texto" for="nombreAdmin">Nombre </label>
-                    <input class="datos-input" type="text" id="nombreAdmin">
+                    <input class="datos-input" type="text" id="nombreAdmin" disabled>
                 </div>
                 <div class="contenedor-datos__usuario datos">
                     <label class="datos-texto" for="usuario">Usuario </label>
-                    <input class="datos-input" type="text" id="usuario">
-                </div>
-                <div class="contenedor-datos__contraseña datos">
-                    <label class="datos-texto" for="contraseña">Contraseña </label>
-                    <input class="datos-input" type="password" id="contraseña">
+                    <input class="datos-input" type="text" id="usuario" disabled>
                 </div>
                 <div class="contenedor-datos__correo datos">
                     <label class="datos-texto" for="email">Email </label>
-                    <input class="datos-input datos-input__email" type="email" id="email">
+                    <input class="datos-input datos-input__email" type="email" id="email" disabled>
                 </div>
 
                 <div class="contenedor-datos__edad datos">
                     <label class="datos-texto" for="edad">Edad </label>
-                    <input class="datos-input datos-input__email" type="number" id="edad">
+                    <input class="datos-input datos-input__email" type="number" id="edad" disabled>
+                </div>
+
+                <div class="contenedor-datos__contraseña datos">
+                    <label class="datos-texto" for="estatus">Estatus</label>
+                    <input class="datos-input" type="text" id="estatus" disabled>
                 </div>
 
                 <div class="contenedor-botones">
                     <div class="boton__agregar" id="btnModificar">
-                        Eliminar
+                        Realizar modificacion
                     </div>
                 </div>
 
@@ -118,7 +119,7 @@
             
         </form>
     </div>
-<script src="../js/modificarProductos.js" type="module"></script>
+<script src="../js/baja-admin.js" type="module"></script>
 <script src="../js/comprobarAdmin.js"></script>
 </body>
 </html>

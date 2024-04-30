@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion de Productos</title>
-    <link rel="stylesheet" href="../admin/css/perfil-admin.css">
-    <link rel="stylesheet" href="../admin/css/normalize.css">
-    <link rel="stylesheet" href="../admin/css/gestion.css">
-    <link rel="stylesheet" href="../admin/css/nav.css">
-    <link rel="stylesheet" href="../admin/css/perfil-admin.css">
-    <link rel="stylesheet" href="../css/iniciocss.css">
-    <link rel="stylesheet" href="../css/configuracion.css">
+    <title>Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../css/nav.css">
-
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/configuracion.css">
+    <link rel="stylesheet" href="../css/historial-carrito.css">
 </head>
 
 <body>
@@ -78,54 +77,19 @@
         </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
 
 
+        <h2 class="titulo-detalles centrar-texto">Historial de compras</h2>
+        
 
-        <h2 class="titulo-texto centrar-texto">Información del Usuario</h2>
+        <div class="contenedor-principal">
 
-        <main class="contenedor-datos contenedor">
-            <div class="contenedor-datos__foto">
-                <img src="/img/user.png" alt="">
-            </div>
-            <div class="contenedor-datos__texto">
-                <div class="contenedor-datos__nombre datos">
-                    <label class="datos-texto" for="nombreAdmin">Nombre </label>
-                    <input class="datos-input" type="text" id="nombreAdmin">
-                </div>
-                <div class="contenedor-datos__usuario datos">
-                    <label class="datos-texto" for="usuario">Usuario </label>
-                    <input class="datos-input" type="text" id="usuario">
-                </div>
-                <div class="contenedor-datos__contraseña datos">
-                    <label class="datos-texto" for="contraseña">Contraseña </label>
-                    <input class="datos-input" type="password" id="contraseña">
-                </div>
-                <div class="contenedor-datos__correo datos">
-                    <label class="datos-texto" for="email">Email </label>
-                    <input class="datos-input datos-input__email" type="email" id="email">
-                </div>
+        </div>
 
-                <div class="contenedor-datos__edad datos">
-                    <label class="datos-texto" for="edad">Edad </label>
-                    <input class="datos-input datos-input__email" type="number" id="edad">
-                </div>
-
-                <div class="contenedor-botones">
-                    <div class="boton__agregar" id="btnModificar">
-                        Modificar datos
-                    </div>
-
-                    <div class="boton__agregar" id="btnCerrar">
-                        Cerrar sesion
-                    </div>
-                </div>
-
-            </div>
-        </main>
-
-    </div>
 
 
 </body>
-<script src="../js/usuario.js" type="module"></script>
-<script src="../js/comprobarUsuario.js"></script>
 
+<!--<script src="../js/detalles.js" type="module"></script>  -->
+<script src="../js/comprobarUsuario.js"></script>
+<script src="../js/historial-carrito.js" type="module"></script>
+<!-- <script src="../js/cookies.js"></script> -->
 </html>

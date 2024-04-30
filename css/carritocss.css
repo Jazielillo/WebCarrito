@@ -339,7 +339,7 @@ img {
   color: white;
 }
 
-.nombre-producto {
+.nombre-productos, .nombre-producto {
   font-size: 2rem;
   font-weight: 700;
 }

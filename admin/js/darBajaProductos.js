@@ -159,7 +159,7 @@ async function modificarProducto(id) {
     res = "activo";
   }
   
-  modificarEstatus(id, res);
+  modificarEstatus("Productos", id, res);
   mostrarModal("Producto modificado correctamente")
 }
 

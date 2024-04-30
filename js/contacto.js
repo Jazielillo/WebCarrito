@@ -38,9 +38,10 @@ async function enviarDatos() {
   const idMensaje = horaActual.getTime();
 
   if (nombre && email && msj) {
-
-    await subirInformacion("Mensajes", nombre, null, idMensaje, msj, email);
-    mostrarModal("Mensaje enviado correctamente :D")
+    if (verificarCorreo()) {
+      await subirInformacion("Mensajes", nombre, null, idMensaje, msj, email);
+      mostrarModal("Mensaje enviado correctamente :D");
+    }
   } else {
     mostrarModal("Por favor, llena los campos correctamente", "mal");
   }
@@ -69,4 +70,20 @@ function mostrarModal(mensaje, operacion) {
     }
     mensajeDiv.classList.remove("mal");
   }, 3000); // 2000 milisegundos = 2 segundos
+}
+
+function verificarCorreo() {
+  const correoRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const correoInput = document.getElementById("email");
+  let validar = correoRegex.test(correoInput.value);
+  if (!validar) {
+    mostrarModal(
+      "El correo no es un correo valido",
+      "mal",
+      "mensaje-validacion"
+    );
+    return false;
+  } else {
+    return true;
+  }
 }

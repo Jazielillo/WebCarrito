@@ -173,14 +173,16 @@ function enviarCorreo(id) {
   let idEncriptado = cifradoCesar(auxiliar, 3);
 
   let urlActual = window.location.href;
-
+  
   // Verificar si la URL termina con "registrarse.html"
-  if (urlActual.endsWith("registrarse.html")) {
+  if (urlActual.endsWith("alta-usuarios.html")) {
     // Reemplazar "registrarse.html" con "login.html"
-    urlActual = urlActual.replace("registrarse.html", "validacionCorreo.html");
+    urlActual = urlActual.replace("alta-usuarios.html", "validacionCorreo.html");
   }
 
   urlActual += `?${idEncriptado}`;
+
+  console.log(urlActual)
 
   const serviceID = "default_service";
   const templateID = "template_ryp16yk";
@@ -203,6 +205,7 @@ function enviarCorreo(id) {
         alert(JSON.stringify(err));
       }
     );
+
 }
 
 function cifradoCesar(texto, clave) {

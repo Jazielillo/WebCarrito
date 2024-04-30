@@ -107,8 +107,9 @@ async function realizarInventario(idUsuario) {
   let cantidad = document.querySelectorAll(".cantidad");
 
   let productos = [];
+  let nombresProductos = document.querySelectorAll(".nombre-productos");
   obtenerPrecios();
-  console.log(productosPrecios)
+  console.log(productosPrecios);
   let cc = 0;
   // Iterar sobre las cantidades con un bucle for...of
   for (const el of cantidad) {
@@ -119,7 +120,7 @@ async function realizarInventario(idUsuario) {
       parseInt(el.innerText)
     );
     productos.push({
-      id: parseInt(el.classList[1]),
+      nombre: nombresProductos[cc].innerText,
       cantidad: parseInt(el.innerText),
       totalCompra: productosPrecios[cc],
     });
@@ -130,13 +131,14 @@ async function realizarInventario(idUsuario) {
   const idCompra = horaActual.getTime();
 
   let totalVenta = productosPrecios.reduce((acumulador, numero) => acumulador + numero, 0)
+  let nombreUsuario = document.getElementById("nombre").innerText;
   // Esperar a subir la información después de haber recopilado los productos
   await subirInformacion(
     "Compras",
     regresarFechaHumano(),
     null,
     idCompra,
-    idUsuario,
+    nombreUsuario,
     productos,
     totalVenta
   );
@@ -162,7 +164,7 @@ function rellenarEspacio(producto, urls) {
   div.innerHTML = `
           <img class="imagen-productos" src="${url.url}" alt="">
                       <div class="descripcion-productos">
-                          <p class="nombre-producto">${producto.data.nombre}</p>
+                          <p class="nombre-productos">${producto.data.nombre}</p>
                           <p class="nombre-producto eliminar" id="${producto.data.id}">Eliminar</p>
                       </div>
                       <div class="cantidad-productos">

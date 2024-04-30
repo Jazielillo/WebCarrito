@@ -283,7 +283,6 @@ export async function modificarInformacion(
           nuevosDatos.edad = parseInt(nuevoDato3);
         }
       }
-      console.log(nuevosDatos);
       await updateDoc(docRef, nuevosDatos);
       console.log("Documento actualizado correctamente");
     } else {
@@ -305,8 +304,8 @@ export async function obtenerTodosLosDocumentos(tabla) {
   return documentos;
 }
 
-export async function modificarEstatus(id, estatus) {
-  const washingtonRef = doc(firestore, "Productos", `${id}`);
+export async function modificarEstatus(tabla, id, estatus) {
+  const washingtonRef = doc(firestore,`${tabla}` , `${id}`);
 
   // Set the "capital" field of the city 'DC'
   await updateDoc(washingtonRef, {
