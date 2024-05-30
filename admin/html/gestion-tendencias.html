@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Productos</title>
+    
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/gestion.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+</head>
+<body>
+    <div class="container">
+        <div class="contenedor-arriba">
+            <nav class="navegacion header">
+                <div class="nav-imagen">
+                    <a href="gestion.html">
+                        <div class="foto-perfil">
+                            <img src="../img/logoTienda.png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="icono-perfil">
+                    <a href="perfil-admin.html" class="flex-cel flex-perfil">
+                        <img src="../img/user.png" alt="">
+                        <p id="nombre">Admin</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/mensajes.html" class="flex-cel flex-perfil">
+                        <img src="../../img/mensaje.png" alt="">
+                        <p>Mensajes</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/gestionar-usuarios.html" class="flex-cel flex-perfil">
+                        <img src="../img/gestionUsuarios.png" alt="">
+                        <p>Gestionar Usuarios</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/gestion.html" class="flex-cel flex-perfil">
+                        <img src="../img/caja.png" alt="">
+                        <p>Gestionar productos</p>
+                    </a>
+                </div>
+            </nav>
+        </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
+
+
+
+        <!-- ICONOS ALTA / BAJA / MODIFICAR -->
+        <main class="contenedor-gestion contenedor centrar-texto">
+            <a class="panel-añadir panel" href="producto-vendido.html">
+                <img class="imagen" src="../img/mas-vendidos.png" alt="añadirFoto">
+                <div class="texto">Productos mas vendidos</div>
+            </a>
+            <a class="panel-modificar panel" href="producto-generador.html">
+                <img class="imagen" src="../img/producto-que-mas-genera.png" alt="modificarFoto">
+                <div class="texto">Productos que mas generan</div>
+            </a>
+            <a class="panel-eliminar panel" href="clientes-compradores.html">
+                <img class="imagen" src="../img/clientes-que-mas-compran.png" alt="eliminarFoto">
+                <div class="texto">Clientes que compran mas</div>
+            </a>
+            <a class="panel-eliminar panel" href="clientes-generadores.html">
+                <img class="imagen" src="../img/clientes-que-mas-generan.jpg" alt="eliminarFoto">
+                <div class="texto">Clientes que generan mas</div>
+            </a>
+        </main>
+
+    </div>
+
+
+</body>
+<script src="../js/comprobarAdmin.js"></script>
+</html>

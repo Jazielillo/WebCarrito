@@ -121,3 +121,26 @@ body {
 .formulario .botones {
     margin: 0 10rem;
 }
+
+.mensaje {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 12rem;
+    background-color: #4caf50; /* Verde amigable */
+    color: #fff;
+    font-size: 3rem;
+    text-align: center;
+    padding-top: 4rem;
+    z-index: 999;
+  }
+  
+  .bien {
+    background-color: #4caf50; /* Verde amigable */
+  }
+  
+  .mal {
+    background-color: #ff5733;
+  }

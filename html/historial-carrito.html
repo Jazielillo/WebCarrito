@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <link rel="stylesheet" href="../css/configuracion.css">
+    <link rel="stylesheet" href="../css/historial-carrito.css">
+</head>
+
+<body>
+    <div class="mensaje" id="mensajeDiv"></div>
+    <div class="container">
+        <div class="contenedor-arriba">
+            <nav class="navegacion header">
+                <div class="nav-imagen">
+                    <a href="inicio.html">
+                        <div class="foto-perfil">
+                            <img src="../img/logoTienda.png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="contenedor-buscador">
+                    <div class="nav-buscador">
+                        <div class="nav-buscador-select">
+                            <select>
+                                <option value="">Todas las categorías</option>
+                                <option value="electronics">Electrónicos</option>
+                                <option value="clothing">Ropa</option>
+                                <option value="books">Libros</option>
+                            </select>
+                        </div>
+                        <input type="text" id="searchInput" placeholder="Buscar productos...">
+                        <button onclick="buscar()"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+
+
+                <div class="icono-celular">
+                    <a href="../html/contacto.html" class="flex-cel">
+                        <div class="imagen-celular">
+                            <img src="../img/telefono.png" alt="error">
+                        </div>
+                        <div class="contenido">
+                            <p>Comprar ahora</p>
+                            <p>6682936047</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="icono-perfil">
+                    <a href="perfil-admin.html" class="flex-cel flex-perfil">
+                        <img src="../img/user.png" alt="">
+                        <p id="nombre"></p>
+                    </a>
+                </div>
+                <div class="icono-carrito">
+                    <a href="../html/carrito.html" class="flex-cel flex-perfil">
+                        <img src="../img/carroCompras.png" alt="">
+                        <p>Carrito</p>
+                    </a>
+                </div>
+                <div class="icono-carrito">
+                    <a href="../html/historial-carrito.html" class="flex-cel flex-perfil">
+                        <img src="../img/carrito.png" alt="">
+                        <p>Historial</p>
+                    </a>
+                </div>
+            </nav>
+        </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
+
+
+        <h2 class="titulo-detalles centrar-texto">Historial de compras</h2>
+        
+
+        <div class="contenedor-principal">
+
+        </div>
+
+
+
+</body>
+
+<!--<script src="../js/detalles.js" type="module"></script>  -->
+<script src="../js/comprobarUsuario.js"></script>
+<script src="../js/historial-carrito.js" type="module"></script>
+<!-- <script src="../js/cookies.js"></script> -->
+</html>

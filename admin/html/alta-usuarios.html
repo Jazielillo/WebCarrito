@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Productos</title>
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/gestion.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/alta-usuarios.css">
+
+</head>
+
+<body>
+    <div class="mensaje" id="mensajeDiv"></div>
+    <div class="container">
+        <div class="contenedor-arriba">
+            <nav class="navegacion header">
+                <div class="nav-imagen">
+                    <a href="gestion.html">
+                        <div class="foto-perfil">
+                            <img src="../img/logoTienda.png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="icono-perfil">
+                    <a href="perfil-admin.html" class="flex-cel flex-perfil">
+                        <img src="../img/user.png" alt="">
+                        <p id="nombre">Admin</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/mensajes.html" class="flex-cel flex-perfil">
+                        <img src="../../img/mensaje.png" alt="">
+                        <p>Mensajes</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/gestionar-usuarios.html" class="flex-cel flex-perfil">
+                        <img src="../img/gestionUsuarios.png" alt="">
+                        <p>Gestionar Usuarios</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/gestion.html" class="flex-cel flex-perfil">
+                        <img src="../img/caja.png" alt="">
+                        <p>Gestionar productos</p>
+                    </a>
+                </div>
+            </nav>
+        </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
+
+
+        <h2 class="titulo-texto centrar-texto contenedor-datos">Dar de alta Usuario</h2>
+
+        <main class="contenedor-datos contenedor">
+            <div class="contenedor-datos__foto">
+                <img src="/img/user.png" alt="">
+            </div>
+            <div class="contenedor-datos__texto">
+                <div class="contenedor-datos__nombre datos">
+                    <label class="datos-texto" for="nombreAdmin">Nombre </label>
+                    <input class="datos-input" type="text" id="nombreAdmin">
+                </div>
+                <div class="contenedor-datos__usuario datos">
+                    <label class="datos-texto" for="usuario">Usuario </label>
+                    <input class="datos-input" type="text" id="usuario">
+                </div>
+                <div class="contenedor-datos__contraseña datos">
+                    <label class="datos-texto" for="contraseña">Contraseña </label>
+                    <input class="datos-input" type="password" id="password">
+                </div>
+                <div class="contenedor-datos__correo datos">
+                    <label class="datos-texto" for="email">Email </label>
+                    <input class="datos-input datos-input__email" type="email" id="email">
+                </div>
+
+                <div class="contenedor-datos__edad datos">
+                    <label class="datos-texto" for="edad">Edad </label>
+                    <input class="datos-input datos-input__email" type="number" id="edad">
+                </div>
+
+                <div class="contenedor-botones">
+                    <div class="boton__agregar" id="btnModificar">
+                        Aceptar
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+
+</body>
+<script src="../js/alta-usuarios.js" type="module"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    emailjs.init('ctT4IaQ1HSWYeUNKz')
+</script>
+
+</html>

@@ -120,7 +120,7 @@ async function pintarProductos(foto, nombre, id, productosAlmacenados) {
         "No hay suficientes unidades en el almacen para esto",
         "mal"
       );
-    } else {
+    } else if (inputNumero > 0){
       let nombre = localStorage.getItem("usuarioActual");
       console.log(nombre)
       let aux = await entregarId("Usuarios", "usuario", nombre);
@@ -131,45 +131,50 @@ async function pintarProductos(foto, nombre, id, productosAlmacenados) {
       }else{
         mostrarModal("Stock insuficiente", "mal");
       }
+    } else {
+      mostrarModal("Cantidad Incorrecta", "MAL");
     }
   });
 }
 
-function ponerCarrito(productoEncontrado, noMasProductos, noPasarAqui) {
-  let carritos = JSON.parse(localStorage.getItem("carrito")) || [];
-  carrito(productoEncontrado, carritos, noMasProductos, noPasarAqui);
-}
+// function ponerCarrito(productoEncontrado, noMasProductos, noPasarAqui) {
+//   let carritos = JSON.parse(localStorage.getItem("carrito")) || [];
+//   carrito(productoEncontrado, carritos, noMasProductos, noPasarAqui);
+// }
 
-function carrito(producto, carrito, noMasProductos, noPasarAqui) {
-  // Verificar si el producto ya está en el carrito por su ID
-  const productoExistente = carrito.find((item) => item.id === producto.id);
+// function carrito(producto, carrito, noMasProductos, noPasarAqui) {
+//   // Verificar si el producto ya está en el carrito por su ID
+//   const productoExistente = carrito.find((item) => item.id === producto.id);
 
-  console.log(noMasProductos);
-  if (productoExistente) {
-    let aux = parseInt(productoExistente.cantidad) + noMasProductos;
-    console.log(aux, noPasarAqui);
-    if (aux <= noPasarAqui && noMasProductos >= 1) {
-      productoExistente.cantidad =
-        parseInt(productoExistente.cantidad) + parseInt(noMasProductos);
+//   console.log(noMasProductos);
+//   if (productoExistente) {
+//     let aux = parseInt(productoExistente.cantidad) + noMasProductos;
+//     // console.log(aux, noPasarAqui);
+//     if (aux <= noPasarAqui && noMasProductos >= 1) {
+      
+//       productoExistente.cantidad =
+//         parseInt(productoExistente.cantidad) + parseInt(noMasProductos);
 
-      mostrarModal("Producto agregado correctamente");
-    } else {
-      mostrarModal("No hay suficiente stock, verifica tu carrito", "mal");
-    }
-  } else {
-    if (noMasProductos < 1) {
-      mostrarModal("Que andas haciendo tramposo", "mal");
-    } else {
-      // Si el producto no está en el carrito, agregarlo
-      mostrarModal("Producto agregado correctamente");
-      console.log(producto);
-      carrito.push({ ...producto, cantidad: parseInt(noMasProductos) });
-    }
-  }
+//       mostrarModal("Producto agregado correctamente");
+//     } else {
+//       mostrarModal("No hay suficiente stock, verifica tu carrito", "mal");
+//     }
+//   } else  {
+    
+//     if (noMasProductos < 1) {
+//       console.log(noMasProductos);
+//       mostrarModal("Que andas haciendo tramposo", "mal");
+//     } else {
+//       // Si el producto no está en el carrito, agregarlo
+//       mostrarModal("Producto agregado correctamente");
+//       // console.log(producto);
+//       carrito.push({ ...producto, cantidad: parseInt(noMasProductos) });
+//     }
+//   }
 
-  // Guardar el carrito actualizado en el localStorage
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-}
+//   // Guardar el carrito actualizado en el localStorage
+//   localStorage.setItem("carrito", JSON.stringify(carrito));
+// }
 
 function validarNumero() {
   let input = document.getElementById("numero");

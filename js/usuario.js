@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function cerrarSesion() {
   mostrarModal("Cerrando sesion...");
-  window.location.href = "../../html/login.html";
+  window.location.href = "../html/login.html";
 }
 
 async function llenarDatos() {
@@ -102,6 +102,6 @@ async function modificarAdmin() {
       email.value,
       id
     );
-    mostrarModal("Perfil de admin, modificado correctamente :D");
+    mostrarModal("Perfil de Usuario, modificado correctamente :D");
   }
 }

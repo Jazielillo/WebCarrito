@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDwkhwJW0W63BLCik72IRqAL9EOhIsmoko",
-  authDomain: "fir-df1ec.firebaseapp.com",
-  projectId: "fir-df1ec",
-  storageBucket: "fir-df1ec.appspot.com",
-  messagingSenderId: "775054586512",
-  appId: "1:775054586512:web:cf8bc09020c2f184a95e15",
+  apiKey: "AIzaSyCK7zVWPLge96q_bkh1gvPJJNqeCnqslfE",
+  authDomain: "carrito-compras-1367a.firebaseapp.com",
+  projectId: "carrito-compras-1367a",
+  storageBucket: "carrito-compras-1367a.appspot.com",
+  messagingSenderId: "1094106728627",
+  appId: "1:1094106728627:web:9855e103bb9b178c2648c6",
 };
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
@@ -129,7 +129,26 @@ export async function subirInformacion(
       usuario: dato3,
       email: dato4,
       carrito: {},
-      estatus: "inactivo"
+      compras: {},
+      estatus: "inactivo",
+    };
+    await setDoc(doc(firestore, `${tabla}`, `${id}`), data);
+  } else if (tabla === "Mensajes") {
+    data = {
+      nombre: titulo,
+      email: dato2,
+      mensaje: dato1,
+      situacionMensaje: "no-leido",
+      id,
+    };
+    await setDoc(doc(firestore, `${tabla}`, `${id}`), data);
+  } else if (tabla === "Compras") {
+    data = {
+      fecha: titulo,
+      productos: dato2,
+      id,
+      usuario:dato1,
+      totalVenta:dato3
     };
     await setDoc(doc(firestore, `${tabla}`, `${id}`), data);
   }
@@ -155,7 +174,8 @@ export async function verificarCredenciales(nombre, pass) {
   const q1 = query(
     citiesRef,
     where("usuario", "==", nombre),
-    where("password", "==", pass)
+    where("password", "==", pass),
+    where("estatus", "==", "activo")
   );
 
   try {
@@ -263,7 +283,6 @@ export async function modificarInformacion(
           nuevosDatos.edad = parseInt(nuevoDato3);
         }
       }
-      console.log(nuevosDatos);
       await updateDoc(docRef, nuevosDatos);
       console.log("Documento actualizado correctamente");
     } else {
@@ -285,12 +304,30 @@ export async function obtenerTodosLosDocumentos(tabla) {
   return documentos;
 }
 
-export async function modificarEstatus(id, estatus) {
-  const washingtonRef = doc(firestore, "Productos", `${id}`);
+export async function modificarEstatus(tabla, id, estatus) {
+  const washingtonRef = doc(firestore,`${tabla}` , `${id}`);
 
   // Set the "capital" field of the city 'DC'
   await updateDoc(washingtonRef, {
     estatus,
+  });
+}
+
+export async function modificarEstatusUsuario(id, estatus) {
+  const washingtonRef = doc(firestore, "Usuarios", `${id}`);
+
+  // Set the "capital" field of the city 'DC'
+  await updateDoc(washingtonRef, {
+    estatus,
+  });
+}
+
+export async function modificarEstatusMensaje(id, situacionMensaje) {
+  const washingtonRef = doc(firestore, "Mensajes", `${id}`);
+
+  // Set the "capital" field of the city 'DC'
+  await updateDoc(washingtonRef, {
+    situacionMensaje,
   });
 }
 
@@ -526,3 +563,9 @@ export async function eliminarCarrito(id) {
 
   console.log("Colección de carrito eliminada correctamente.");
 }
+
+export async function eliminarMensaje(id) {
+  await deleteDoc(doc(firestore, "Mensajes", `${id}`));
+}
+
+export async function crearCompraUsuario(id) {}

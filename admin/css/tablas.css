@@ -1,0 +1,65 @@
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+}
+
+.tablas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+  }
+  
+  .tablas .tabla {
+    margin: 5rem 2.5rem 0;
+  }
+  
+  .tablas .tabla th,
+  .tablas .tabla td {
+    padding: 1.4rem;
+    text-align: left;
+  }
+  
+  .tablas .tabla th {
+    background-color: #f8f8f8;
+  }
+  
+  .tablas .tabla tr {
+    background-color: #f2f2f2;
+  }
+  
+  .tablas .grupo-btn-ventas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tablas .btn {
+    height: 5rem;
+    display: flex;
+    border-radius: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 5rem 0;
+    min-width: 15rem;
+    max-width: 52.5rem;
+    background-color: #f3dfdf;
+  }
+  
+  .tablas .dataTables_filters label {
+    font-size: 2rem;
+  }
+  
+  .tablas .tabla .eliminar {
+    width: 10px;
+    cursor: pointer;
+  }
+  
+  .tablas .tabla .agregar {
+    width: 10px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Tendencias</title>
+
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/gestion.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/tablas.css">   
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.bootstrap5.css">
+    <!-- Preloads --><script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contenedor-arriba">
+            <nav class="navegacion header">
+                <div class="nav-imagen">
+                    <a href="gestion.html">
+                        <div class="foto-perfil">
+                            <img src="../img/logoTienda.png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="icono-perfil">
+                    <a href="perfil-admin.html" class="flex-cel flex-perfil">
+                        <img src="../img/user.png" alt="">
+                        <p id="nombre">Admin</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/mensajes.html" class="flex-cel flex-perfil">
+                        <img src="../../img/mensaje.png" alt="">
+                        <p>Mensajes</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/gestionar-usuarios.html" class="flex-cel flex-perfil">
+                        <img src="../img/gestionUsuarios.png" alt="">
+                        <p>Gestionar Usuarios</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/gestion.html" class="flex-cel flex-perfil">
+                        <img src="../img/caja.png" alt="">
+                        <p>Gestionar productos</p>
+                    </a>
+                </div>
+            </nav>
+        </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
+
+        <div class="titulo">
+            <h2>Productos que generan mas ingresos</h2>
+        </div>
+
+        <main class="contenedor-tabla centrar-texto">
+
+        </main>
+
+        <div class="titulo">
+            <h2>Grafica de productos</h2>
+        </div>
+
+
+        <div class="grafica">
+
+        </div>
+
+
+
+
+        <div class="grafica2">
+
+        </div>
+
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+</body>
+<script src="../js/comprobarAdmin.js"></script><!-- jQuery -->
+<script src="../js/producto-generador.js" type="module">
+</script>
+
+</html>

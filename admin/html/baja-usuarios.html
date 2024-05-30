@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Usuarios</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../../css/iniciocss.css">
+    <link rel="stylesheet" href="../../css/configuracion.css">
+    <link rel="stylesheet" href="../../css/nav.css">
+    <link rel="stylesheet" href="../css/gestion.css">
+    <link rel="stylesheet" href="../css/gestion-productos.css">
+    <link rel="stylesheet" href="../css/baja-usuarios.css">
+    <script src="https://kit.fontawesome.com/9834f61985.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="mensaje" id="mensajeDiv"></div>
+    <div class="container">
+        <div class="contenedor-arriba">
+            <nav class="navegacion header">
+                <div class="nav-imagen">
+                    <a href="gestion.html">
+                        <div class="foto-perfil">
+                            <img src="../img/logoTienda.png" alt="">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="icono-perfil">
+                    <a href="perfil-admin.html" class="flex-cel flex-perfil">
+                        <img src="../img/user.png" alt="">
+                        <p id="nombre">Admin</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/mensajes.html" class="flex-cel flex-perfil">
+                        <img src="../../img/mensaje.png" alt="">
+                        <p>Mensajes</p>
+                    </a>
+                </div>
+
+                <div class="icono-carrito">
+                    <a href="../html/gestionar-usuarios.html" class="flex-cel flex-perfil">
+                        <img src="../img/gestionUsuarios.png" alt="">
+                        <p>Gestionar Usuarios</p>
+                    </a>
+                </div>
+                
+                <div class="icono-carrito">
+                    <a href="../html/gestion.html" class="flex-cel flex-perfil">
+                        <img src="../img/caja.png" alt="">
+                        <p>Gestionar productos</p>
+                    </a>
+                </div>
+            </nav>
+        </div> <!-- FIN DE LA BARRA DE NAVEGACIÓN -->
+
+    </div>
+
+
+
+    
+
+
+    <div class="contenedor-principal">
+        <h2 class="titulo-izquierda">Baja usuarios</h2>
+        <form class="formularios-alta-productos">
+            
+            <div class="contenedor-busqueda">
+                <div class="contenedor-busqueda-arriba">
+                    <div class="contenedor-buscador contenedor-buscador2">
+                        <div class="nav-buscador contenedor-buscador2" >
+                            <input type="text" id="searchInput" placeholder="Buscar usuarios...">
+                            <button onclick="buscar()"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="busqueda-productos">
+                    
+                </div>
+
+            </div>
+
+            <div class="contenedor-datos__texto">
+                <div class="contenedor-datos__nombre datos">
+                    <label class="datos-texto" for="nombreAdmin">Nombre </label>
+                    <input class="datos-input" type="text" id="nombreAdmin" disabled>
+                </div>
+                <div class="contenedor-datos__usuario datos">
+                    <label class="datos-texto" for="usuario">Usuario </label>
+                    <input class="datos-input" type="text" id="usuario" disabled>
+                </div>
+                <div class="contenedor-datos__correo datos">
+                    <label class="datos-texto" for="email">Email </label>
+                    <input class="datos-input datos-input__email" type="email" id="email" disabled>
+                </div>
+
+                <div class="contenedor-datos__edad datos">
+                    <label class="datos-texto" for="edad">Edad </label>
+                    <input class="datos-input datos-input__email" type="number" id="edad" disabled>
+                </div>
+
+                <div class="contenedor-datos__contraseña datos">
+                    <label class="datos-texto" for="estatus">Estatus</label>
+                    <input class="datos-input" type="text" id="estatus" disabled>
+                </div>
+
+                <div class="contenedor-botones">
+                    <div class="boton__agregar" id="btnModificar">
+                        Realizar modificacion
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </form>
+    </div>
+<script src="../js/baja-admin.js" type="module"></script>
+<script src="../js/comprobarAdmin.js"></script>
+</body>
+</html>
